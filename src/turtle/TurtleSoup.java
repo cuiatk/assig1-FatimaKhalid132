@@ -15,7 +15,8 @@ public class TurtleSoup {
      * @param sideLength length of each side
      */
     public static void drawSquare(Turtle turtle, int sideLength) {
-        throw new RuntimeException("implement me!");
+    	final int SIDES_OF_SQUARE = 4;
+        drawRegularPolygon(turtle, SIDES_OF_SQUARE, sideLength);
     }
 
     /**
@@ -109,7 +110,11 @@ public class TurtleSoup {
      * @param turtle the turtle context
      */
     public static void drawPersonalArt(Turtle turtle) {
-        throw new RuntimeException("implement me!");
+    	 for(int i = 0; i < 15; i++)
+    	 { // i < 15 to limit size of shapes
+             drawRegularPolygon(turtle, i, i*10);
+             drawRegularPolygon(turtle, i*10, i);
+    	 }
     }
 
     /**
